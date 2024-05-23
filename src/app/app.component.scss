@@ -1,0 +1,12 @@
+.main-cont{
+    background: #0d1117;
+    min-height: 90vh;
+}
+
+@media screen and (max-width: 930px) {
+    .main-cont {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

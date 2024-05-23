@@ -1,0 +1,11 @@
+.cardss{
+    width: 25rem;
+}
+
+
+@media screen and (max-width: 500px) {
+    .cardss{
+        width: 20rem;
+        height: fit-content;
+    }
+}

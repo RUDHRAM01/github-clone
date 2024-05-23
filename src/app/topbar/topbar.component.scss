@@ -1,0 +1,89 @@
+.topBar {
+  background: #010409;
+  padding: 16px 16px 0px 16px;
+  border-bottom: 1px solid #e6edf34f;
+
+  .menu {
+    border: 1px solid #8d96a084;
+    border-radius: 4px;
+    padding: 6px;
+    height: 32px;
+  }
+
+  .dotBtn::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1f6feb;
+    position: absolute;
+    top: -8%;
+    right: 6%;
+  }
+
+  .tab {
+    cursor: pointer;
+
+    padding: 4px;
+  }
+  .tab:hover {
+    background-color: #303338;
+    border-radius: 4px;
+  }
+  .tab:nth-child(2) {
+    border-bottom: 3px solid #f78166;
+  }
+
+  .search-btn {
+    background: #303338;
+    color: white;
+    border: none;
+  }
+
+  .search-btn:hover {
+    background: #393c3f;
+    transition: 0.3s;
+  }
+
+  .tab:nth-child(2) div {
+    background: #303338;
+    border-radius: 4px;
+    padding: 4px;
+  }
+}
+
+.search {
+  width: 300px;
+}
+
+.rightTop {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #8d96a044;
+  padding: 1px 8px;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 830px) {
+  .dot {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 830px) {
+  .hide-search {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search,
+  .Stars,
+  .Packages,
+  .Projects,
+  .Overview {
+    display: none;
+  }
+}

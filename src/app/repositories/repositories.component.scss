@@ -1,0 +1,31 @@
+.actionBtn{
+    background: #21262d;
+    border: none;
+    color: white;
+    padding: 4px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 12px 0px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+
+.actionBtn:hover{
+    background: #2e343b;
+}
+
+
+.cardss{
+    width: 25rem;
+}
+
+
+@media screen and (max-width: 500px) {
+    .cardss{
+        width: 18rem;
+    }
+}

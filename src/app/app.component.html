@@ -1,0 +1,13 @@
+<div class="custom-container">
+  <app-topbar [user]="user" (Search)="handleSearch($event)"> </app-topbar>
+  <div class="flex center main-cont">
+    <app-profile [user]="user" [isLoading]="userLoading"></app-profile>
+    <app-repositories
+      [repositories]="repositories"
+      [currentPage]="currentPage"
+      [totalPages]="totalPages"
+      [isLoading]="isLoading"
+      (PageChange)="handlePageChange($event)"
+    ></app-repositories>
+  </div>
+</div>

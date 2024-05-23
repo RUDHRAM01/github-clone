@@ -1,0 +1,162 @@
+<div class="topBar">
+  <div class="top-first space-between">
+    <div class="flex gap-4" style="align-items: center">
+      <img src="assets/menu.svg" alt="Logo" class="menu" />
+      <img
+        src="assets/github.svg"
+        alt="GitHub Logo"
+        style="height: 30px; width: 30px"
+      />
+      <span class="text-white" style="font-size: 14px; font-weight: 600">{{
+        user.login
+      }}</span>
+    </div>
+    <div class="flex gap-2" style="align-items: center">
+      <div class="dot rightTop">
+        <img
+          src="assets/search.svg"
+          alt="Search"
+          class="search-icon dot"
+          style="height: 16px"
+        />
+        <input
+          type="text"
+          placeholder="Search"
+          style="background: none"
+          class="search dot focus:outline-none focus:border-transparent focus:ring-0 text-gray-100"
+          [(ngModel)]="searchValue"
+          name="searchValue"
+          (keydown.enter)="searchUser()"
+        />
+        <button
+          class="search-btn dot focus:outline-none px-2 py-2"
+          (click)="searchUser()"
+        >
+          <img
+            src="assets/search.svg"
+            alt="Search"
+            class="search-icon"
+            style="height: 16px"
+          />
+        </button>
+      </div>
+      <div
+        class="divide-y-1 dot"
+        style="background-color: gray; width: 1px; height: 50%"
+      ></div>
+      <div
+        class="flex gap-2 dot"
+        style="
+          align-items: center;
+          border: 1px solid #8d96a044;
+          padding: 2px 8px;
+          border-radius: 4px;
+        "
+      >
+        <img
+          src="assets/plus.svg"
+          alt="plus"
+          class="plus"
+          style="height: 20px"
+        />
+        <img
+          src="assets/down.svg"
+          alt="down"
+          class="dot"
+          style="height: 16px"
+        />
+      </div>
+      <div
+        style="
+          align-items: center;
+          border: 1px solid #8d96a044;
+          padding: 4px 8px;
+          border-radius: 4px;
+        "
+        class="dot"
+      >
+        <img src="assets/dot.svg" alt="dot" class="dot" style="height: 16px" />
+      </div>
+      <div
+        style="
+          align-items: center;
+          border: 1px solid #8d96a044;
+          padding: 4px 8px;
+          border-radius: 4px;
+        "
+        class="dot"
+      >
+        <img src="assets/pull.svg" alt="dot" class="dot" style="height: 16px" />
+      </div>
+      <div style="position: relative;"> 
+        <button
+        style="
+          align-items: center;
+          border: 1px solid #8d96a044;
+          padding: 4px 8px;
+          border-radius: 4px;
+        "
+        class="dot dotBtn"
+      >
+        <img
+          src="assets/noti.svg"
+          alt="noti"
+          class="dot"
+          style="height: 16px"
+        />
+      </button>
+      </div>
+      <div>
+        <img
+          src="{{ user.avatar_url }}"
+          alt="dot"
+          class="userimg"
+          style="height: 32px; border-radius: 50%"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="mt-4 hide-search">
+    <div class="rightTop">
+      <img
+        src="assets/search.svg"
+        alt="Search"
+        class="search-icon "
+        style="height: 16px"
+      />
+      <input
+        type="text"
+        placeholder="Search"
+        style="background: none;width: 100%;"
+        class=" focus:outline-none focus:border-transparent focus:ring-0 text-gray-100"
+        [(ngModel)]="searchValue"
+        name="searchValue"
+        (keydown.enter)="searchUser()"
+      />
+      <button
+        class="search-btn focus:outline-none px-2 py-2"
+        (click)="searchUser()"
+      >
+        <img
+          src="assets/search.svg"
+          alt="Search"
+          class="search-icon"
+          style="height: 16px"
+        />
+      </button>
+    </div>
+  </div>
+  <div class="tabs flex mt-4 gap-4">
+    <div
+      class="tab flex gap-2 {{ tab.name }}"
+      *ngFor="let tab of tabs"
+      style="align-items: center"
+    >
+      <img src="{{ tab.link }}" alt="icon" class="icon" style="height: 16px" />
+      <span class="text-white">{{ tab.name }}</span>
+      <div class="text-white">
+        {{ tab.count == "repo" ? this.user.public_repos : "" }}
+      </div>
+    </div>
+  </div>
+</div>
