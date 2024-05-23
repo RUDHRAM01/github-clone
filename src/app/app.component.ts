@@ -33,7 +33,8 @@ export class AppComponent implements OnInit {
       },
       error: (error) => {
         console.error('There was an error!', error);
-        this.handleSearch('johnpapa');
+        this.userLoading = false;
+        this.isLoading = false;
       },
     });
     this.apiService.getRepos(username, this.currentPage).subscribe({
@@ -43,7 +44,8 @@ export class AppComponent implements OnInit {
       },
       error: (error) => {
         console.error('There was an error!', error);
-        this.handleSearch('johnpapa');
+        this.userLoading = false;
+        this.isLoading = false;
       },
     });
   }
@@ -58,7 +60,8 @@ export class AppComponent implements OnInit {
       },
       error: (error) => {
         console.error('There was an error!', error);
-        this.handleSearch('johnpapa');
+        this.userLoading = false;
+        this.isLoading = false;
       },
     });
   }
